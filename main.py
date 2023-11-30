@@ -35,41 +35,25 @@ while True:
   
   if user_input == "0":
     print(rock)
-    print("Computer chooses:")
-    
-    if computer_choose == 0:
-      print(rock)
-    elif computer_choose == 1:
-      print(paper)
-    else:
-      print(scissors)
   
   elif user_input == "1":
     print(paper)
-    print("Computer chooses:")
     
-    if computer_choose == 0:
-      print(rock)
-    elif computer_choose == 1:
-      print(paper)
-    else:
-      print(scissors)
-      
   elif user_input == "2":
     print(scissors)
-    print("Computer chooses:")
     
-    if computer_choose == 0:
-      print(rock)
-    elif computer_choose == 1:
-      print(paper)
-    else:
-      print(scissors)
-      
   else:
     print("Invalid input") 
-  
-  
+
+  print("Computer chooses:")
+
+  if computer_choose == 0:
+    print(rock)
+  elif computer_choose == 1:
+    print(paper)
+  else:
+    print(scissors)
+
   if user_input == "0" and computer_choose == 0:
     print("Tie")
   elif user_input == "0" and computer_choose == 1:
@@ -90,8 +74,6 @@ while True:
     print("Tie")
 
   user_choose = input("You wanna try again? 'Y' or 'N' ")
-  if user_choose.upper() == "Y":
-    continue
-  else:
+  if user_choose.upper() != "Y":
     print("Ok, bye!")
     break
